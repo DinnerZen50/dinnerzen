@@ -367,7 +367,7 @@ border: "1px solid #e5e7eb",
     color: "#7c3aed",
   }}
 >
-  👩‍🍳 View instructions
+ 🛒 View Full Ingredient List
 </summary>
 
   <ul style={{ paddingLeft: 20, lineHeight: 1.8}}>
@@ -377,7 +377,7 @@ border: "1px solid #e5e7eb",
   </ul>
 </details><details style={{ marginTop: 12 }}>
   <summary style={{ cursor: "pointer", fontWeight: "bold" }}>
-    View instructions
+    👩‍🍳 View Step-by-Step Instructions
   </summary>
 
   <ol> style={{ paddingLeft: 20, lineHeight: 1.8}}>
