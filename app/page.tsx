@@ -9,6 +9,7 @@ export default function Home() {
   const [paid, setPaid] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [favorites, setFavorites] =useState([]);
 
   const signUp = async () => {
     const { error } = await supabase.auth.signUp({ email, password });
@@ -194,7 +195,14 @@ const logOut = async () => {
 </p>
       
       <h3>{meal.meal}</h3>
-      <button
+    <button
+  onClick={() => {
+    if (favorites.includes(meal.id)) {
+      setFavorites(favorites.filter((id) => id !== meal.id));
+    } else {
+      setFavorites([...favorites, meal.id]);
+    }
+  }}
   style={{
     border: "none",
     background: "transparent",
@@ -203,7 +211,7 @@ const logOut = async () => {
     marginBottom: 10,
   }}
 >
-  🤍
+  {favorites.includes(meal.id) ? "❤️" : "🤍"}
 </button>
 
       <p>{meal.description}</p>
