@@ -288,10 +288,10 @@ border: "1px solid #e5e7eb",
   style={{
     cursor: "pointer",
     fontWeight: "bold",
-    color: "#4f7c65",
+    color: "#7c3aed",
   }}
 >
-  🛒 View ingredients
+  👩‍🍳 View instructions
 </summary>
 
   <ul style={{ paddingLeft: 20, lineHeight: 1.8}}>
@@ -304,7 +304,7 @@ border: "1px solid #e5e7eb",
     View instructions
   </summary>
 
-  <ol>
+  <ol> style={{ paddingLeft: 20, lineHeight: 1.8}}>
     {meal.steps.map((step, i) => (
       <li key={i}>{step}</li>
     ))}
