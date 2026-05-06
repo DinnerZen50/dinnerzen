@@ -82,8 +82,33 @@ export default function Home() {
 
         <br /><br />
 
-        <button onClick={signUp}>Sign Up</button>
-        <button onClick={signIn} style={{ marginLeft: 10 }}>
+        <button
+  onClick={signUp}
+  style={{
+    padding: "12px 24px",
+    borderRadius: 10,
+    border: "none",
+    backgroundColor: "#4f7c65",
+    color: "white",
+    fontSize: 16,
+    cursor: "pointer",
+  }}
+>
+  Sign Up
+</button>
+        <button
+  onClick={signIn}
+  style={{
+    marginLeft: 10,
+    padding: "12px 24px",
+    borderRadius: 10,
+    border: "none",
+    backgroundColor: "#1f2937",
+    color: "white",
+    fontSize: 16,
+    cursor: "pointer",
+  }}
+>
           Log In
         </button>
       </div>
