@@ -194,6 +194,17 @@ const logOut = async () => {
 </p>
       
       <h3>{meal.meal}</h3>
+      <button
+  style={{
+    border: "none",
+    background: "transparent",
+    fontSize: 24,
+    cursor: "pointer",
+    marginBottom: 10,
+  }}
+>
+  🤍
+</button>
 
       <p>{meal.description}</p>
 
