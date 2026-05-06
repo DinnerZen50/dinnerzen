@@ -9,15 +9,33 @@ export default function Home() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get("paid") === "true") {
-      setPaid(true);
-      localStorage.setItem("dinnerzenPaid", "true");
-    }
+  const signIn = async () => {
+  const { data, error } = await supabase.auth.signInWithPassword({
+    email,
+    password,
+  });
 
-    if (localStorage.getItem("dinnerzenPaid") === "true") {
-      setPaid(true);
+  if (error) {
+    alert(error.message);
+    return;
+  }
+
+  const userId = data.user.id;
+
+  const { data: profile, error: profileError } = await supabase
+    .from("profiles")
+    .select("has_paid")
+    .eq("id", userId)
+    .single();
+
+  if (profileError) {
+    alert("Login worked, but we could not check your payment status.");
+    return;
+  }
+
+  setPaid(profile.has_paid === true);
+  setStarted(true);
+};
     }
   }, []);
 
