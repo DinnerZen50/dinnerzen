@@ -49,9 +49,21 @@ export default function Home() {
 
   if (!started) {
     return (
-      <div style={{ padding: 40, fontFamily: "sans-serif" }}>
-        <h1>DinnerZen 🌿</h1>
-        <p>Your personalized 52-week dinner plan is waiting 👇</p>
+      <div
+  style={{
+    padding: 40,
+    fontFamily: "sans-serif",
+    maxWidth: 700,
+    margin: "0 auto",
+    textAlign: "center",
+  }}
+>
+        <h1 style={{ fontSize: 48, marginBottom: 10 }}>
+  DinnerZen 🌿
+</h1>
+        <p style={{ fontSize: 20, color: "#555", marginBottom: 30 }}>
+  Stress-free family dinners planned for you every week.
+</p>
 
         <input
           placeholder="Email"
