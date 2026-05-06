@@ -202,6 +202,17 @@ const logOut = async () => {
       </p>
 
       <p>💰 {meal.cost}</p>
+      <details style={{ marginTop: 12 }}>
+  <summary style={{ cursor: "pointer", fontWeight: "bold" }}>
+    View ingredients
+  </summary>
+
+  <ul>
+    {meal.ingredients.map((item, i) => (
+      <li key={i}>{item}</li>
+    ))}
+  </ul>
+</details>
     </div>
   ))}
 </div>
