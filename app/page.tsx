@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { supabase } from "../supabase.js";
 
 export default function Home() {
@@ -9,56 +9,42 @@ export default function Home() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const signIn = async () => {
-  const { data, error } = await supabase.auth.signInWithPassword({
-    email,
-    password,
-  });
-
-  if (error) {
-    alert(error.message);
-    return;
-  }
-
-  const userId = data.user.id;
-
-  const { data: profile, error: profileError } = await supabase
-    .from("profiles")
-    .select("has_paid")
-    .eq("id", userId)
-    .single();
-
-  if (profileError) {
-    alert("Login worked, but we could not check your payment status.");
-    return;
-  }
-
-  setPaid(profile.has_paid === true);
-  setStarted(true);
-};
-    }
-
   const signUp = async () => {
     const { error } = await supabase.auth.signUp({ email, password });
 
     if (error) {
       alert(error.message);
     } else {
-      alert("Check your email to confirm signup!");
+      alert("Account created! Now click Log In.");
     }
   };
 
   const signIn = async () => {
-    const { error } = await supabase.auth.signInWithPassword({
+    const { data, error } = await supabase.auth.signInWithPassword({
       email,
       password,
     });
 
     if (error) {
       alert(error.message);
-    } else {
-      setStarted(true);
+      return;
     }
+
+    const userId = data.user.id;
+
+    const { data: profile, error: profileError } = await supabase
+      .from("profiles")
+      .select("has_paid")
+      .eq("id", userId)
+      .single();
+
+    if (profileError) {
+      alert("Login worked, but payment status could not be checked.");
+      return;
+    }
+
+    setPaid(profile.has_paid === true);
+    setStarted(true);
   };
 
   if (!started) {
@@ -112,7 +98,10 @@ export default function Home() {
         <button
           style={{ marginTop: 20 }}
           onClick={() =>
-            window.open("https://buy.stripe.com/test_3cIeVeg3Ef2F7pd9aQ9sk01", "_blank")
+            window.open(
+              "https://buy.stripe.com/test_3cIeVeg3Ef2F7pd9aQ9sk01",
+              "_blank"
+            )
           }
         >
           🔥 Unlock All 52 Weeks Instantly ($29)
@@ -131,8 +120,6 @@ export default function Home() {
         <li>Week 2: BBQ Sliders, Beef Chili, Salmon, Shrimp Pasta</li>
         <li>Week 3: Chicken Parmesan, Carnitas Bowls, Stir Fry, Shakshuka</li>
       </ul>
-
-      <p>More weeks coming here next. Look at you, building a paid app like a sneaky little tech wizard.</p>  
     </div>
   );
 }
