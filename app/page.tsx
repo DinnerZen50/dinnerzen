@@ -295,6 +295,19 @@ border: "1px solid #e5e7eb",
     🧈 Fat: {meal.fat}
   </span>
 </div>
+    <div
+  style={{
+    marginTop: 12,
+    padding: 12,
+    borderRadius: 10,
+    background: "#f8fafc",
+    border: "1px solid #e2e8f0",
+    color: "#475569",
+    fontSize: 14,
+  }}
+>
+  ✨ Balanced for busy families: protein, comfort, and weeknight simplicity.
+</div> 
 <div
   style={{
     display: "flex",
