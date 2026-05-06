@@ -66,7 +66,15 @@ export default function Home() {
 </p>
 
         <input
-          placeholder="Email"
+  placeholder="Email"
+  style={{
+    padding: 12,
+    width: "100%",
+    maxWidth: 400,
+    borderRadius: 10,
+    border: "1px solid #ccc",
+    fontSize: 16,
+  }}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -74,11 +82,19 @@ export default function Home() {
         <br /><br />
 
         <input
-          placeholder="Password"
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+  placeholder="Password"
+  type="password"
+  value={password}
+  onChange={(e) => setPassword(e.target.value)}
+  style={{
+    padding: 12,
+    width: "100%",
+    maxWidth: 400,
+    borderRadius: 10,
+    border: "1px solid #ccc",
+    fontSize: 16,
+  }}
+/>
 
         <br /><br />
 
