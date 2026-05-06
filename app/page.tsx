@@ -284,11 +284,17 @@ border: "1px solid #e5e7eb",
 
       <p>💰 {meal.cost}</p>
       <details style={{ marginTop: 12 }}>
-  <summary style={{ cursor: "pointer", fontWeight: "bold" }}>
-    View ingredients
-  </summary>
+  <summary
+  style={{
+    cursor: "pointer",
+    fontWeight: "bold",
+    color: "#4f7c65",
+  }}
+>
+  🛒 View ingredients
+</summary>
 
-  <ul>
+  <ul style={{ paddingLeft: 20, lineHeight: 1.8}}>
     {meal.ingredients.map((item, i) => (
       <li key={i}>{item}</li>
     ))}
