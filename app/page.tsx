@@ -228,6 +228,20 @@ border: "1px solid #e5e7eb",
 </p>
       
       <h3>{meal.meal}</h3>
+     <div
+  style={{
+    display: "inline-block",
+    background: "#dcfce7",
+    color: "#166534",
+    padding: "4px 10px",
+    borderRadius: 999,
+    fontSize: 12,
+    fontWeight: "bold",
+    marginBottom: 10,
+  }}
+>
+  ⭐ Family Approved
+</div> 
     <button
   onClick={() => {
     if (favorites.includes(meal.id)) {
