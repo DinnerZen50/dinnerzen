@@ -203,8 +203,10 @@ const logOut = async () => {
       key={meal.id}
       style={{
         background: "#f8f8f8",
+        boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
+border: "1px solid #e5e7eb",
         padding: 20,
-        borderRadius: 12,
+        borderRadius: 16,
         marginBottom: 16,
         textAlign: "left",
       }}
