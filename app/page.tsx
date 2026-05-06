@@ -271,9 +271,37 @@ border: "1px solid #e5e7eb",
 </p>
       <p>{meal.description}</p>
 
-      <p>
-        ⏱ Prep: {meal.prepTime} | 🍳 Cook: {meal.cookTime}
-      </p>
+      <div
+  style={{
+    display: "flex",
+    gap: 10,
+    marginTop: 10,
+    marginBottom: 10,
+    flexWrap: "wrap",
+  }}
+>
+  <div
+    style={{
+      background: "#ede9fe",
+      padding: "6px 12px",
+      borderRadius: 999,
+      fontSize: 13,
+    }}
+  >
+    ⏱ Prep: {meal.prepTime}
+  </div>
+
+  <div
+    style={{
+      background: "#dbeafe",
+      padding: "6px 12px",
+      borderRadius: 999,
+      fontSize: 13,
+    }}
+  >
+    🔥 Cook: {meal.cookTime}
+  </div>
+</div>
       <div
   style={{
     display: "flex",
