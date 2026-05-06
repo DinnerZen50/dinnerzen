@@ -178,11 +178,30 @@ const logOut = async () => {
 </button>
       <h2>✅ Your Full 52-Week Plan Is Unlocked</h2>
 
-      <ul>
-        <li>Week 1: Honey Garlic Chicken, Taco Night, Pasta Night, Fried Rice</li>
-        <li>Week 2: BBQ Sliders, Beef Chili, Salmon, Shrimp Pasta</li>
-        <li>Week 3: Chicken Parmesan, Carnitas Bowls, Stir Fry, Shakshuka</li>
-      </ul>
+      <div style={{ marginTop: 30 }}>
+  {MEALS.slice(0, 6).map((meal) => (
+    <div
+      key={meal.id}
+      style={{
+        background: "#f8f8f8",
+        padding: 20,
+        borderRadius: 12,
+        marginBottom: 16,
+        textAlign: "left",
+      }}
+    >
+      <h3>{meal.meal}</h3>
+
+      <p>{meal.description}</p>
+
+      <p>
+        ⏱ Prep: {meal.prepTime} | 🍳 Cook: {meal.cookTime}
+      </p>
+
+      <p>💰 {meal.cost}</p>
+    </div>
+  ))}
+</div>
     </div>
   );
 }
