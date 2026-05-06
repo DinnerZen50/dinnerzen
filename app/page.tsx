@@ -292,6 +292,18 @@ const logOut = async () => {
       {meal.veggieAlt.vegNote}
     </p>
   </div>
+      <div
+  style={{
+    marginTop: 12,
+    padding: 12,
+    borderRadius: 10,
+    background: "#f0f9ff",
+    border: "1px solid #bae6fd",
+  }}
+>
+  <strong>🍽️ Portion Notes:</strong>
+  <p style={{ marginBottom: 0 }}>{meal.portionNotes}</p>
+</div>
 )}  
       
       
