@@ -304,6 +304,19 @@ border: "1px solid #e5e7eb",
 </div>
       <div
   style={{
+    background: "#fef3c7",
+    color: "#92400e",
+    display: "inline-block",
+    padding: "6px 12px",
+    borderRadius: 999,
+    fontSize: 13,
+    marginBottom: 12,
+  }}
+>
+  💰 Estimated Cost: {meal.cost}
+</div>
+      <div
+  style={{
     display: "flex",
     gap: 10,
     flexWrap: "wrap",
