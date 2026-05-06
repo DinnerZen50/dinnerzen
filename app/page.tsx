@@ -260,7 +260,15 @@ border: "1px solid #e5e7eb",
 >
   {favorites.includes(meal.id) ? "❤️" : "🤍"}
 </button>
-
+<p
+  style={{
+    color: "#6b7280",
+    fontSize: 13,
+    marginTop: 8,
+  }}
+>
+  🍽️ {meal.proteinType} Dinner
+</p>
       <p>{meal.description}</p>
 
       <p>
