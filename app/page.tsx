@@ -109,10 +109,19 @@ export default function Home() {
       </div>
     );
   }
-
+const logOut = async () => {
+  await supabase.auth.signOut();
+  setStarted(false);
+  setPaid(false);
+  setEmail("");
+  setPassword("");
+};
   return (
     <div style={{ padding: 40, fontFamily: "sans-serif" }}>
       <h1>Welcome to DinnerZen 🌿</h1>
+      <button onClick={logOut} style={{ marginBottom: 20 }}>
+  Log Out
+</button>
       <h2>✅ Your Full 52-Week Plan Is Unlocked</h2>
 
       <ul>
