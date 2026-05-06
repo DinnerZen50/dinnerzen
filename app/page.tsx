@@ -189,7 +189,10 @@ const logOut = async () => {
         marginBottom: 16,
         textAlign: "left",
       }}
-    >
+    ><p style={{ fontWeight: "bold", color: "#4f7c65" }}>
+  Week {Math.floor(index / 3) + 1} • Dinner {(index % 3) + 1}
+</p>
+      
       <h3>{meal.meal}</h3>
 
       <p>{meal.description}</p>
