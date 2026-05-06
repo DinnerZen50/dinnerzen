@@ -37,7 +37,6 @@ export default function Home() {
   setStarted(true);
 };
     }
-  }, []);
 
   const signUp = async () => {
     const { error } = await supabase.auth.signUp({ email, password });
