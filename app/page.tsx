@@ -393,6 +393,19 @@ border: "1px solid #e5e7eb",
   }}
 >
   💰 Estimated Cost: {meal.cost}
+</div><div
+  style={{
+    background: "#ecfccb",
+    color: "#365314",
+    display: "inline-block",
+    padding: "6px 12px",
+    borderRadius: 999,
+    fontSize: 13,
+    marginLeft: 8,
+    marginBottom: 12,
+  }}
+>
+  👨‍👩‍👧‍👦 Serves about {totalPeople}
 </div>
       <div
   style={{
