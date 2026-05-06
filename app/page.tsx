@@ -270,7 +270,48 @@ border: "1px solid #e5e7eb",
   🍽️ {meal.proteinType} Dinner
 </p>
       <p>{meal.description}</p>
+<div
+  style={{
+    display: "flex",
+    gap: 8,
+    flexWrap: "wrap",
+    marginTop: 10,
+    marginBottom: 10,
+  }}
+>
+  <span
+    style={{
+      background: "#fee2e2",
+      padding: "5px 10px",
+      borderRadius: 999,
+      fontSize: 12,
+    }}
+  >
+    🍽️ Comfort Food
+  </span>
 
+  <span
+    style={{
+      background: "#dcfce7",
+      padding: "5px 10px",
+      borderRadius: 999,
+      fontSize: 12,
+    }}
+  >
+    ⚡ Family Favorite
+  </span>
+
+  <span
+    style={{
+      background: "#dbeafe",
+      padding: "5px 10px",
+      borderRadius: 999,
+      fontSize: 12,
+    }}
+  >
+    ⏱️ Weeknight Easy
+  </span>
+</div>
       <div
   style={{
     display: "flex",
