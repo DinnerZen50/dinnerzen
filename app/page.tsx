@@ -258,7 +258,7 @@ border: "1px solid #e5e7eb",
     marginBottom: 10,
   }}
 >
-  {favorites.includes(meal.id) ? "❤️" : "🤍"}
+  {favorites.includes(meal.id) ? "❤️Saved" : "🤍Save Favorite"}
 </button>
 <p
   style={{
