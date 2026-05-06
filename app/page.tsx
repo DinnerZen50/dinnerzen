@@ -200,6 +200,48 @@ const logOut = async () => {
       <p>
         ⏱ Prep: {meal.prepTime} | 🍳 Cook: {meal.cookTime}
       </p>
+      <div
+  style={{
+    display: "flex",
+    gap: 10,
+    flexWrap: "wrap",
+    marginTop: 10,
+    marginBottom: 10,
+  }}
+>
+  <span
+    style={{
+      background: "#e0f2fe",
+      padding: "6px 10px",
+      borderRadius: 999,
+      fontSize: 12,
+    }}
+  >
+    💪 {meal.protein}
+  </span>
+
+  <span
+    style={{
+      background: "#fef3c7",
+      padding: "6px 10px",
+      borderRadius: 999,
+      fontSize: 12,
+    }}
+  >
+    🍞 {meal.carbs}
+  </span>
+
+  <span
+    style={{
+      background: "#fee2e2",
+      padding: "6px 10px",
+      borderRadius: 999,
+      fontSize: 12,
+    }}
+  >
+    🔥 {meal.calories} cal
+  </span>
+</div>
 
       <p>💰 {meal.cost}</p>
       <details style={{ marginTop: 12 }}>
