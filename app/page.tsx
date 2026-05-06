@@ -222,7 +222,19 @@ const logOut = async () => {
       <li key={i}>{step}</li>
     ))}
   </ol>
-</details>
+</details><div
+  style={{
+    marginTop: 12,
+    padding: 12,
+    borderRadius: 10,
+    background: "#fff7ed",
+    border: "1px solid #fed7aa",
+  }}
+>
+  <strong>🙈 Picky Eater Adjustment:</strong>
+  <p style={{ marginBottom: 0 }}>{meal.pickyVersion}</p>
+</div>
+      
       
     </div>
   ))}
