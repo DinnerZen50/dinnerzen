@@ -368,6 +368,28 @@ border: "1px solid #e5e7eb",
     </div>
   ))}
 </div>
+   <div
+  style={{
+    marginTop: 40,
+    padding: 24,
+    borderRadius: 16,
+    background: "#f9fafb",
+    border: "1px dashed #cbd5e1",
+    textAlign: "left",
+  }}
+>
+  <h2>🚀 Coming Soon</h2>
+
+  <ul style={{ lineHeight: 2 }}>
+    <li>🛒 Automatic grocery lists</li>
+    <li>📅 Full weekly calendar mode</li>
+    <li>🥦 Vegetarian swap automation</li>
+    <li>💰 Pantry meal generator</li>
+    <li>🍮 Dessert add-on packs</li>
+    <li>❤️ Saved favorites dashboard</li>
+    <li>📱 Mobile app version</li>
+  </ul>
+</div> 
     </div>
   );
 }
