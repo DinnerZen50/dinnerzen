@@ -212,7 +212,18 @@ const logOut = async () => {
       <li key={i}>{item}</li>
     ))}
   </ul>
+</details><details style={{ marginTop: 12 }}>
+  <summary style={{ cursor: "pointer", fontWeight: "bold" }}>
+    View instructions
+  </summary>
+
+  <ol>
+    {meal.steps.map((step, i) => (
+      <li key={i}>{step}</li>
+    ))}
+  </ol>
 </details>
+      
     </div>
   ))}
 </div>
