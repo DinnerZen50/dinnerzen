@@ -178,7 +178,25 @@ const logOut = async () => {
   Log Out
 </button>
       <h2>✅ Your Full 52-Week Plan Is Unlocked</h2>
+<div
+  style={{
+    background: "#ecfdf5",
+    padding: 20,
+    borderRadius: 16,
+    marginTop: 30,
+    marginBottom: 24,
+    border: "1px solid #bbf7d0",
+  }}
+>
+  <h2 style={{ marginTop: 0 }}>
+    🌿 Your Personalized Dinner Plan
+  </h2>
 
+  <p style={{ marginBottom: 0 }}>
+    Family-friendly meals customized for busy nights, picky eaters,
+    and real life.
+  </p>
+</div>
       <div style={{ marginTop: 30 }}>
   {MEALS.slice(0, 6).map((meal) => (
     <div
