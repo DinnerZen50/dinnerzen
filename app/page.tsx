@@ -270,6 +270,31 @@ border: "1px solid #e5e7eb",
   🍽️ {meal.proteinType} Dinner
 </p>
       <p>{meal.description}</p>
+      <div
+  style={{
+    display: "flex",
+    gap: 8,
+    flexWrap: "wrap",
+    marginTop: 10,
+    marginBottom: 10,
+  }}
+>
+  <span style={{ background: "#e0f2fe", padding: "6px 10px", borderRadius: 999, fontSize: 12 }}>
+    💪 Protein: {meal.protein}
+  </span>
+
+  <span style={{ background: "#fef3c7", padding: "6px 10px", borderRadius: 999, fontSize: 12 }}>
+    🔥 Calories: {meal.calories}
+  </span>
+
+  <span style={{ background: "#ede9fe", padding: "6px 10px", borderRadius: 999, fontSize: 12 }}>
+    🍞 Carbs: {meal.carbs}
+  </span>
+
+  <span style={{ background: "#dcfce7", padding: "6px 10px", borderRadius: 999, fontSize: 12 }}>
+    🧈 Fat: {meal.fat}
+  </span>
+</div>
 <div
   style={{
     display: "flex",
