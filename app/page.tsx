@@ -234,6 +234,23 @@ const logOut = async () => {
   <strong>🙈 Picky Eater Adjustment:</strong>
   <p style={{ marginBottom: 0 }}>{meal.pickyVersion}</p>
 </div>
+    {meal.veggieAlt && (
+  <div
+    style={{
+      marginTop: 12,
+      padding: 12,
+      borderRadius: 10,
+      background: "#ecfdf5",
+      border: "1px solid #bbf7d0",
+    }}
+  >
+    <strong>🥦 Vegetarian Option:</strong>
+    <p style={{ marginBottom: 4 }}>{meal.veggieAlt.meal}</p>
+    <p style={{ marginBottom: 0, color: "#555" }}>
+      {meal.veggieAlt.vegNote}
+    </p>
+  </div>
+)}  
       
       
     </div>
