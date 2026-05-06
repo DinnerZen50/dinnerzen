@@ -3,7 +3,14 @@
 import { useState } from "react";
 import { supabase } from "../supabase.js";
 import {MEALS} from "./data/meals";
-
+const colors = {
+  sage: "#7c9a7c",
+  softSage: "#a8c3a8",
+  cream: "#f7f3eb",
+  beige: "#e6dccd",
+  tan: "#d2b48c",
+  text: "#4b4b4b",
+};
 export default function Home() {
   const [started, setStarted] = useState(false);
   const [paid, setPaid] = useState(false);
@@ -106,7 +113,7 @@ export default function Home() {
     padding: "12px 24px",
     borderRadius: 10,
     border: "none",
-    backgroundColor: "#4f7c65",
+    backgroundColor: colors.sage,
     color: "white",
     fontSize: 16,
     cursor: "pointer",
@@ -121,7 +128,7 @@ export default function Home() {
     padding: "12px 24px",
     borderRadius: 10,
     border: "none",
-    backgroundColor: "#1f2937",
+    backgroundColor: colors.sage,
     color: "white",
     fontSize: 16,
     cursor: "pointer",
@@ -181,8 +188,8 @@ const logOut = async () => {
       <div
   style={{
     display: "inline-block",
-    background: "#fef3c7",
-    color: "#92400e",
+    background: colors.beige,
+    color: colors.text,
     padding: "8px 14px",
     borderRadius: 999,
     fontWeight: "bold",
@@ -193,12 +200,12 @@ const logOut = async () => {
 </div>
 <div
   style={{
-    background: "#ecfdf5",
+    background: colors.beige,
     padding: 20,
     borderRadius: 16,
     marginTop: 30,
     marginBottom: 24,
-    border: "1px solid #bbf7d0",
+    border: '1px solid ${colors.softSage}',
   }}
 >
   <h2 style={{ marginTop: 0 }}>
@@ -215,15 +222,15 @@ const logOut = async () => {
     <div
       key={meal.id}
       style={{
-        background: "#f8f8f8",
+        background: colors.cream,
         boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
-border: "1px solid #e5e7eb",
+border: '1px solid ${colors.beige}',
         padding: 20,
         borderRadius: 16,
         marginBottom: 16,
         textAlign: "left",
       }}
-    ><p style={{ fontWeight: "bold", color: "#4f7c65" }}>
+    ><p style={{ fontWeight: "bold", color: colors.softSage }}>
   Week {Math.floor(index / 3) + 1} • Dinner {(index % 3) + 1}
 </p>
       
@@ -231,8 +238,8 @@ border: "1px solid #e5e7eb",
      <div
   style={{
     display: "inline-block",
-    background: "#dcfce7",
-    color: "#166534",
+    background: colors.softSage,
+    color: colors.text,
     padding: "4px 10px",
     borderRadius: 999,
     fontSize: 12,
@@ -262,7 +269,7 @@ border: "1px solid #e5e7eb",
 </button>
 <p
   style={{
-    color: "#6b7280",
+    color: colors.text,
     fontSize: 13,
     marginTop: 8,
   }}
@@ -279,19 +286,19 @@ border: "1px solid #e5e7eb",
     marginBottom: 10,
   }}
 >
-  <span style={{ background: "#e0f2fe", padding: "6px 10px", borderRadius: 999, fontSize: 12 }}>
+  <span style={{ background: colors.beige, padding: "6px 10px", borderRadius: 999, fontSize: 12 }}>
     💪 Protein: {meal.protein}
   </span>
 
-  <span style={{ background: "#fef3c7", padding: "6px 10px", borderRadius: 999, fontSize: 12 }}>
+  <span style={{ background: colors.beige, padding: "6px 10px", borderRadius: 999, fontSize: 12 }}>
     🔥 Calories: {meal.calories}
   </span>
 
-  <span style={{ background: "#ede9fe", padding: "6px 10px", borderRadius: 999, fontSize: 12 }}>
+  <span style={{ background: colors.beige, padding: "6px 10px", borderRadius: 999, fontSize: 12 }}>
     🍞 Carbs: {meal.carbs}
   </span>
 
-  <span style={{ background: "#dcfce7", padding: "6px 10px", borderRadius: 999, fontSize: 12 }}>
+  <span style={{ background: colors.beige, padding: "6px 10px", borderRadius: 999, fontSize: 12 }}>
     🧈 Fat: {meal.fat}
   </span>
 </div>
@@ -300,9 +307,9 @@ border: "1px solid #e5e7eb",
     marginTop: 12,
     padding: 12,
     borderRadius: 10,
-    background: "#f8fafc",
-    border: "1px solid #e2e8f0",
-    color: "#475569",
+    background: colors.cream,
+    border: '1px solid ${colors.beige}' ,
+    color: colors.text,
     fontSize: 14,
   }}
 >
@@ -319,7 +326,7 @@ border: "1px solid #e5e7eb",
 >
   <span
     style={{
-      background: "#fee2e2",
+      background: colors.softSage,
       padding: "5px 10px",
       borderRadius: 999,
       fontSize: 12,
@@ -330,7 +337,7 @@ border: "1px solid #e5e7eb",
 
   <span
     style={{
-      background: "#dcfce7",
+      background: colors.softSage,
       padding: "5px 10px",
       borderRadius: 999,
       fontSize: 12,
@@ -341,7 +348,7 @@ border: "1px solid #e5e7eb",
 
   <span
     style={{
-      background: "#dbeafe",
+      background: colors.softSage,
       padding: "5px 10px",
       borderRadius: 999,
       fontSize: 12,
@@ -361,7 +368,7 @@ border: "1px solid #e5e7eb",
 >
   <div
     style={{
-      background: "#ede9fe",
+      background: colors.softSage,
       padding: "6px 12px",
       borderRadius: 999,
       fontSize: 13,
@@ -372,7 +379,7 @@ border: "1px solid #e5e7eb",
 
   <div
     style={{
-      background: "#dbeafe",
+      background: colors.softSage,
       padding: "6px 12px",
       borderRadius: 999,
       fontSize: 13,
@@ -384,7 +391,7 @@ border: "1px solid #e5e7eb",
       <div
   style={{
     background: "#fef3c7",
-    color: "#92400e",
+    color: colors.text,
     display: "inline-block",
     padding: "6px 12px",
     borderRadius: 999,
@@ -396,7 +403,7 @@ border: "1px solid #e5e7eb",
 </div><div
   style={{
     background: "#ecfccb",
-    color: "#365314",
+    color: colors.text,
     display: "inline-block",
     padding: "6px 12px",
     borderRadius: 999,
@@ -418,7 +425,7 @@ border: "1px solid #e5e7eb",
 >
   <span
     style={{
-      background: "#e0f2fe",
+      background: colors.softsage,
       padding: "6px 10px",
       borderRadius: 999,
       fontSize: 12,
@@ -429,7 +436,7 @@ border: "1px solid #e5e7eb",
 
   <span
     style={{
-      background: "#fef3c7",
+      background: colors.softSage,
       padding: "6px 10px",
       borderRadius: 999,
       fontSize: 12,
@@ -440,7 +447,7 @@ border: "1px solid #e5e7eb",
 
   <span
     style={{
-      background: "#fee2e2",
+      background: colors.softSage,
       padding: "6px 10px",
       borderRadius: 999,
       fontSize: 12,
@@ -456,7 +463,7 @@ border: "1px solid #e5e7eb",
   style={{
     cursor: "pointer",
     fontWeight: "bold",
-    color: "#7c3aed",
+    color: colors.text,
   }}
 >
  🛒 View Full Ingredient List
@@ -482,8 +489,8 @@ border: "1px solid #e5e7eb",
     marginTop: 12,
     padding: 12,
     borderRadius: 10,
-    background: "#fff7ed",
-    border: "1px solid #fed7aa",
+    background: colors.cream,
+    border: '1px solid ${colors.beige}',
   }}
 >
   <strong>🙈 Picky Eater Adjustment:</strong>
@@ -495,8 +502,8 @@ border: "1px solid #e5e7eb",
       marginTop: 12,
       padding: 12,
       borderRadius: 10,
-      background: "#ecfdf5",
-      border: "1px solid #bbf7d0",
+      background: colors.cream,
+      border: '1px solid ${colors.beige}' ,
     }}
   >
     <strong>🥦 Vegetarian Option:</strong>
@@ -510,8 +517,8 @@ border: "1px solid #e5e7eb",
     marginTop: 12,
     padding: 12,
     borderRadius: 10,
-    background: "#f0f9ff",
-    border: "1px solid #bae6fd",
+    background: colors.cream,
+    border: '1px solid ${colors.beige}',
   }}
 >
   <strong>🍽️ Portion Notes:</strong>
@@ -528,8 +535,8 @@ border: "1px solid #e5e7eb",
     marginTop: 40,
     padding: 24,
     borderRadius: 16,
-    background: "#f9fafb",
-    border: "1px dashed #cbd5e1",
+    background: colors.cream,
+    border: '1px dashed ${colors.beige}',
     textAlign: "left",
   }}
 >
