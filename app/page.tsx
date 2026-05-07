@@ -180,8 +180,7 @@ const logOut = async () => {
   setPassword("");
 };
   
-
-  return (
+ return (
     
     <div style={{ padding: 40, fontFamily: "sans-serif" }}>
       <h1>Welcome to DinnerZen 🌿</h1>
