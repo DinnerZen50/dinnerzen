@@ -140,38 +140,45 @@ export default function Home() {
     );
   }
 
-  if (!paid) {
-    return (
-      <div style={{ padding: 40, fontFamily: "sans-serif" }}>
-        <h2>Your Personalized Weekly Dinner Plan</h2>
-        <p>Built for your family, your tastes, and your schedule.</p>
+ if (!paid) {
+  return (
+    <div style={{ padding: 40, fontFamily: "sans-serif" }}>
+      <h2>Your Personalized Weekly Dinner Plan</h2>
+      <p>Built for your family, your tastes, and your schedule.</p>
 
-        <ul>
-          <li>🍗 Honey Garlic Chicken</li>
-          <li>🌮 Taco Night</li>
-          <li>🍝 Pasta Night</li>
-          <li>🍚 Fried Rice</li>
-        </ul>
+      <ul>
+        <li>🍗 Honey Garlic Chicken</li>
+        <li>🌮 Taco Night</li>
+        <li>🍝 Pasta Night</li>
+        <li>🍚 Fried Rice</li>
+      </ul>
 
-        <p style={{ marginTop: 20 }}>
-          + 51 more weeks ready to go… no more “what’s for dinner?” ever again.
-        </p>
+      <p style={{ marginTop: 20 }}>
+        + 51 more weeks ready to go… no more “what’s for dinner?” ever again.
+      </p>
 
-        <button
-          style={{ marginTop: 20 }}
-          onClick={() =>
-            window.open(
-              "https://buy.stripe.com/test_3cIeVeg3Ef2F7pd9aQ9sk01",
-              "_blank"
-            )
-          }
-        >
-          🔥 Unlock All 52 Weeks Instantly ($29)
-        </button>
-      </div>
-    );
-  }
+      <button
+        style={{ marginTop: 20 }}
+        onClick={() =>
+          window.open(
+            "https://buy.stripe.com/test_3cIeVeg3Ef2F7pd9aQ9sk01",
+            "_blank"
+          )
+        }
+      >
+        🔥 Unlock All 52 Weeks Instantly ($29)
+      </button>
+    </div>
+  );
+}
+
 const logOut = async () => {
+  await supabase.auth.signOut();
+  setStarted(false);
+  setPaid(false);
+  setEmail("");
+  setPassword("");
+};
   await supabase.auth.signOut();
   setStarted(false);
   setPaid(false);
