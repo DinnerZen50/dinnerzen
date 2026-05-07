@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import { supabase } from "../supabase.js";
-import {MEALS} from "./data/meals";
-
+import { MEALS } from "./data/meals";
 export default function Home() {
   const [started, setStarted] = useState(false);
   const [paid, setPaid] = useState(false);
