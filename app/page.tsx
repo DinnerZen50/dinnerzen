@@ -3,6 +3,19 @@
 import { useState } from "react";
 import { supabase } from "../supabase.js";
 import { MEALS } from "./data/meals";
+const C = {
+  ivory: "#faf8f3",
+  sand: "#f0ebe0",
+  sage: "#7a9e7e",
+  sageDark: "#4a7050",
+  sageLight: "#e8f0e8",
+  brown: "#3d2e1e",
+  muted: "#7a6a5a",
+  border: "#ddd8cc",
+  rust: "#c2472a",
+  gold: "#c8921a",
+  white: "#ffffff",
+};
 export default function Home() {
   const [started, setStarted] = useState(false);
   const [paid, setPaid] = useState(false);
