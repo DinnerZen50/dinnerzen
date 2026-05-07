@@ -218,7 +218,7 @@ const logOut = async () => {
   </p>
 </div>
       <div style={{ marginTop: 30 }}>
-  {MEALS.slice(0, 21).map((meal) => (
+  {MEALS.slice(0, 21).map((meal, index) => (
     <div
       key={meal.id}
       style={{
