@@ -179,12 +179,8 @@ const logOut = async () => {
   setEmail("");
   setPassword("");
 };
-  await supabase.auth.signOut();
-  setStarted(false);
-  setPaid(false);
-  setEmail("");
-  setPassword("");
-}
+  
+
   return (
     
     <div style={{ padding: 40, fontFamily: "sans-serif" }}>
