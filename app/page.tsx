@@ -205,7 +205,7 @@ const logOut = async () => {
     borderRadius: 16,
     marginTop: 30,
     marginBottom: 24,
-    border: '1px solid ${colors.softSage}',
+    border: `1px solid ${colors.softSage}`,
   }}
 >
   <h2 style={{ marginTop: 0 }}>
@@ -308,7 +308,7 @@ border: '1px solid ${colors.beige}',
     padding: 12,
     borderRadius: 10,
     background: colors.cream,
-    border: '1px solid ${colors.beige}' ,
+    border: `1px solid ${colors.beige}` ,
     color: colors.text,
     fontSize: 14,
   }}
@@ -490,7 +490,7 @@ border: '1px solid ${colors.beige}',
     padding: 12,
     borderRadius: 10,
     background: colors.cream,
-    border: '1px solid ${colors.beige}',
+    border: `1px solid ${colors.beige}`,
   }}
 >
   <strong>🙈 Picky Eater Adjustment:</strong>
@@ -503,7 +503,7 @@ border: '1px solid ${colors.beige}',
       padding: 12,
       borderRadius: 10,
       background: colors.cream,
-      border: '1px solid ${colors.beige}' ,
+      border: `1px solid ${colors.beige}` ,
     }}
   >
     <strong>🥦 Vegetarian Option:</strong>
@@ -518,7 +518,7 @@ border: '1px solid ${colors.beige}',
     padding: 12,
     borderRadius: 10,
     background: colors.cream,
-    border: '1px solid ${colors.beige}',
+    border: `1px solid ${colors.beige}`,
   }}
 >
   <strong>🍽️ Portion Notes:</strong>
@@ -536,7 +536,7 @@ border: '1px solid ${colors.beige}',
     padding: 24,
     borderRadius: 16,
     background: colors.cream,
-    border: '1px dashed ${colors.beige}',
+    border: `1px dashed ${colors.beige}`,
     textAlign: "left",
   }}
 >
