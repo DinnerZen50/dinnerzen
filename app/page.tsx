@@ -1,5 +1,5 @@
 "use client";
-
+import Head from "next/head";
 import { useState } from "react";
 import { supabase } from "../supabase.js";
 import { MEALS } from "./data/meals";
@@ -62,18 +62,31 @@ export default function Home() {
 
   if (!started) {
     return (
+      <Head>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lora:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+</Head>
       <div
   style={{
     padding: 40,
-    fontFamily: "sans-serif",
+    fontFamily: " 'Lora', serif",
     maxWidth: 700,
     margin: "0 auto",
     textAlign: "center",
   }}
 >
-        <h1 style={{ fontSize: 48, marginBottom: 10 }}>
+       <h1
+  style={{
+    fontFamily: "'Playfair Display', serif",
+    fontSize: 48,
+    marginBottom: 10,
+    color: C.sageDark,
+  }}
+>
   DinnerZen 🌿
-</h1>
+</h1> 
         <p style={{ fontSize: 20, color: "#555", marginBottom: 30 }}>
   Stress-free family dinners planned for you every week.
 </p>
