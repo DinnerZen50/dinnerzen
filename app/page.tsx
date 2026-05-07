@@ -169,8 +169,9 @@ export default function Home() {
         🔥 Unlock All 52 Weeks Instantly ($29)
       </button>
     </div>
-  );
-}
+      );
+    }
+
 
 const logOut = async () => {
   await supabase.auth.signOut();
