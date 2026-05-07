@@ -177,7 +177,7 @@ const logOut = async () => {
   setPaid(false);
   setEmail("");
   setPassword("");
-};
+}
   return (
     
     <div style={{ padding: 40, fontFamily: "sans-serif" }}>
