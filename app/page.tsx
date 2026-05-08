@@ -60,24 +60,25 @@ export default function Home() {
     setStarted(true);
   };
 
-  if (!started) {
-    return (
-      <> 
+ if (!started) {
+  return (
+    <>
       <Head>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lora:wght@400;500;600&display=swap"
-    rel="stylesheet"
-  />
-</Head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lora:wght@400;500;600&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+
       <div
-  style={{
-    padding: 40,
-    fontFamily: " 'Lora', serif",
-    maxWidth: 700,
-    margin: "0 auto",
-    textAlign: "center",
-  }}
->
+        style={{
+          padding: 40,
+          fontFamily: "'Lora', serif",
+          maxWidth: 700,
+          margin: "0 auto",
+          textAlign: "center",
+        }}
+      >
        <h1
   style={{
     fontFamily: "'Playfair Display', serif",
@@ -156,7 +157,7 @@ export default function Home() {
         </button>
       </div>
       </>
-          );
+       );
   }
 
   if (!paid) {
