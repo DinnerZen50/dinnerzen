@@ -62,10 +62,7 @@ export default function Home() {
 
  if (!started) {
   return (
-    <div>
-     
-
-      <div
+    <div
        style={{
   minHeight: "100vh",
   background: `linear-gradient(160deg, ${C.ivory} 0%, ${C.sand} 100%)`,
@@ -178,7 +175,6 @@ export default function Home() {
           Log In
         </button>
       </div>
-          </div>
         );
       }
 
