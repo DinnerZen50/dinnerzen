@@ -71,14 +71,40 @@ export default function Home() {
       </Head>
 
       <div
-        style={{
-          padding: 40,
-          fontFamily: "'Lora', serif",
-          maxWidth: 700,
-          margin: "0 auto",
-          textAlign: "center",
-        }}
-      >
+       style={{
+  minHeight: "100vh",
+  background: `linear-gradient(160deg, ${C.ivory} 0%, ${C.sand} 100%)`,
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  padding: 30,
+  fontFamily: "'Lora', serif",
+}}
+      ><div
+  style={{
+    background: C.white,
+    padding: 40,
+    borderRadius: 24,
+    maxWidth: 500,
+    width: "100%",
+    boxShadow: "0 10px 40px rgba(74,112,80,.12)",
+    border: `1px solid ${C.border}`,
+    textAlign: "center",
+  }}
+><div
+  style={{
+    background: C.white,
+    padding: 40,
+    borderRadius: 24,
+    maxWidth: 500,
+    width: "100%",
+    boxShadow: "0 10px 40px rgba(74,112,80,.12)",
+    border: `1px solid ${C.border}`,
+    textAlign: "center",
+  }}
+>
+        
        <h1
   style={{
     fontFamily: "'Playfair Display', serif",
@@ -155,6 +181,7 @@ export default function Home() {
 >
           Log In
         </button>
+      </div>
       </div>
       </>
        );
