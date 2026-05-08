@@ -63,12 +63,7 @@ export default function Home() {
  if (!started) {
   return (
     <div>
-      <Head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lora:wght@400;500;600&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
+     
 
       <div
        style={{
