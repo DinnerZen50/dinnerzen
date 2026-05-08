@@ -183,10 +183,9 @@ export default function Home() {
           Log In
         </button>
       </div>
-      </div>
-      </div>
-       );
-  }
+          </div>
+        );
+      }
 
   if (!paid) {
     return (
