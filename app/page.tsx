@@ -1,5 +1,4 @@
 "use client";
-import Head from "next/head";
 import { useState } from "react";
 import { supabase } from "../supabase.js";
 import { MEALS } from "./data/meals";
@@ -60,123 +59,109 @@ export default function Home() {
     setStarted(true);
   };
 
- if (!started) {
+if (!started) {
   return (
     <div
-       style={{
-  minHeight: "100vh",
-  background: `linear-gradient(160deg, ${C.ivory} 0%, ${C.sand} 100%)`,
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "center",
-  padding: 30,
-  fontFamily: "'Lora', serif",
-}}
-    ></div>
-      ><div
-  style={{
-    background: C.white,
-    padding: 40,
-    borderRadius: 24,
-    maxWidth: 500,
-    width: "100%",
-    boxShadow: "0 10px 40px rgba(74,112,80,.12)",
-    border: `1px solid ${C.border}`,
-    textAlign: "center",
-  }}
-><div
-  style={{
-    background: C.white,
-    padding: 40,
-    borderRadius: 24,
-    maxWidth: 500,
-    width: "100%",
-    boxShadow: "0 10px 40px rgba(74,112,80,.12)",
-    border: `1px solid ${C.border}`,
-    textAlign: "center",
-  }}
->
-        
-       <h1
-  style={{
-    fontFamily: "'Playfair Display', serif",
-    fontSize: 48,
-    marginBottom: 10,
-    color: C.sageDark,
-  }}
->
-  DinnerZen 🌿
-</h1> 
-        <p style={{ fontSize: 20, color: "#555", marginBottom: 30 }}>
-  Stress-free family dinners planned for you every week.
-</p>
+      style={{
+        minHeight: "100vh",
+        background: `linear-gradient(160deg, ${C.ivory} 0%, ${C.sand} 100%)`,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: 30,
+        fontFamily: "serif",
+      }}
+    >
+      <div
+        style={{
+          background: C.white,
+          padding: 40,
+          borderRadius: 24,
+          maxWidth: 500,
+          width: "100%",
+          boxShadow: "0 10px 40px rgba(74,112,80,.12)",
+          border: `1px solid ${C.border}`,
+          textAlign: "center",
+        }}
+      >
+        <h1
+          style={{
+            fontSize: 48,
+            marginBottom: 10,
+            color: C.sageDark,
+          }}
+        >
+          DinnerZen 🌿
+        </h1>
+
+        <p style={{ fontSize: 20, color: C.muted, marginBottom: 30 }}>
+          Stress-free family dinners planned for you every week.
+        </p>
 
         <input
-  placeholder="Email"
-  style={{
-    padding: 12,
-    width: "100%",
-    maxWidth: 400,
-    borderRadius: 10,
-    border: "1px solid #ccc",
-    fontSize: 16,
-  }}
+          placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          style={{
+            padding: 12,
+            width: "100%",
+            borderRadius: 10,
+            border: `1px solid ${C.border}`,
+            fontSize: 16,
+            marginBottom: 14,
+          }}
         />
 
-        <br /><br />
-
         <input
-  placeholder="Password"
-  type="password"
-  value={password}
-  onChange={(e) => setPassword(e.target.value)}
-  style={{
-    padding: 12,
-    width: "100%",
-    maxWidth: 400,
-    borderRadius: 10,
-    border: "1px solid #ccc",
-    fontSize: 16,
-  }}
-/>
-
-        <br /><br />
+          placeholder="Password"
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          style={{
+            padding: 12,
+            width: "100%",
+            borderRadius: 10,
+            border: `1px solid ${C.border}`,
+            fontSize: 16,
+            marginBottom: 20,
+          }}
+        />
 
         <button
-  onClick={signUp}
-  style={{
-    padding: "12px 24px",
-    borderRadius: 10,
-    border: "none",
-    backgroundColor: "#4f7c65",
-    color: "white",
-    fontSize: 16,
-    cursor: "pointer",
-  }}
->
-  Sign Up
-</button>
+          onClick={signUp}
+          style={{
+            padding: "12px 24px",
+            borderRadius: 10,
+            border: "none",
+            backgroundColor: C.sageDark,
+            color: "white",
+            fontSize: 16,
+            cursor: "pointer",
+            marginRight: 10,
+          }}
+        >
+          Sign Up
+        </button>
+
         <button
-  onClick={signIn}
-  style={{
-    marginLeft: 10,
-    padding: "12px 24px",
-    borderRadius: 10,
-    border: "none",
-    backgroundColor: "#1f2937",
-    color: "white",
-    fontSize: 16,
-    cursor: "pointer",
-  }}
->
+          onClick={signIn}
+          style={{
+            padding: "12px 24px",
+            borderRadius: 10,
+            border: "none",
+            backgroundColor: C.brown,
+            color: "white",
+            fontSize: 16,
+            cursor: "pointer",
+          }}
+        >
           Log In
         </button>
       </div>
-        );
-      }
+    </div>
+  );
+}
+
 
   if (!paid) {
     return (
