@@ -62,7 +62,7 @@ export default function Home() {
 
  if (!started) {
   return (
-    <>
+    <div>
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lora:wght@400;500;600&display=swap"
@@ -81,6 +81,7 @@ export default function Home() {
   padding: 30,
   fontFamily: "'Lora', serif",
 }}
+    ></div>
       ><div
   style={{
     background: C.white,
@@ -183,7 +184,7 @@ export default function Home() {
         </button>
       </div>
       </div>
-      </>
+      </div>
        );
   }
 
