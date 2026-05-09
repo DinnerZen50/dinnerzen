@@ -266,11 +266,12 @@ const logOut = async () => {
         }}
       >
         <span>⏱ Prep: {meal.prepTime}</span>
-        <span>🍳 Cook: {meal.cookTime}</span>
-        <span>💰 {meal.cost}</span>
-      </div>
-    </div>
-  ))}
-</div>   
-  );
-}
+                 <span>🍳 Cook: {meal.cookTime}
+        </span>
+                 <span>💰 {meal.cost}</span>
+               </div>
+             </div>
+           ))}
+         </div>   
+           );
+         }
