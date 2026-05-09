@@ -202,7 +202,14 @@ const logOut = async () => {
   setPassword("");
 };
   return (
-    <div style={{ padding: 40, fontFamily: "sans-serif" }}>
+    <div 
+      style={{ 
+        padding: 40, 
+        fontFamily: "'Lora',serif",
+        background: C. ivory,
+        minHeight: "100vh",
+      }}
+    >
       <h1>Welcome to DinnerZen 🌿</h1>
       <button onClick={logOut} style={{ marginBottom: 20 }}>
   Log Out
