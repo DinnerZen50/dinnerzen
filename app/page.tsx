@@ -209,30 +209,61 @@ const logOut = async () => {
 </button>
       <h2>✅ Your Full 52-Week Plan Is Unlocked</h2>
 
-      <div style={{ marginTop: 30 }}>
+  <div
+  style={{
+    marginTop: 30,
+    display: "grid",
+    gap: 20,
+  }}
+>
   {MEALS.slice(0, 6).map((meal) => (
     <div
       key={meal.id}
       style={{
-        background: "#f8f8f8",
-        padding: 20,
-        borderRadius: 12,
-        marginBottom: 16,
+        background: C.white,
+        padding: 24,
+        borderRadius: 20,
+        marginBottom: 12,
         textAlign: "left",
+        border: `1px solid ${C.border}`,
+        boxShadow: "0 6px 24px rgba(0,0,0,.06)",
       }}
     >
-      <h3>{meal.meal}</h3>
+      <h3
+        style={{
+          color: C.sageDark,
+          fontSize: 24,
+          marginBottom: 10,
+        }}
+      >
+        {meal.meal}
+      </h3>
 
-      <p>{meal.description}</p>
-
-      <p>
-        ⏱ Prep: {meal.prepTime} | 🍳 Cook: {meal.cookTime}
+      <p
+        style={{
+          color: C.muted,
+          lineHeight: 1.6,
+        }}
+      >
+        {meal.description}
       </p>
 
-      <p>💰 {meal.cost}</p>
+      <div
+        style={{
+          display: "flex",
+          gap: 16,
+          marginTop: 14,
+          fontSize: 14,
+          color: C.brown,
+          flexWrap: "wrap",
+        }}
+      >
+        <span>⏱ Prep: {meal.prepTime}</span>
+        <span>🍳 Cook: {meal.cookTime}</span>
+        <span>💰 {meal.cost}</span>
+      </div>
     </div>
   ))}
-</div>
-    </div>
+</div>   
   );
 }
