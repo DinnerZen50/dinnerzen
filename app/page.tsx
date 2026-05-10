@@ -193,6 +193,7 @@ if (!started) {
         </button>
       </div>
     );
+  }
 const logOut = async () => {
   await supabase.auth.signOut();
   setStarted(false);
