@@ -193,7 +193,6 @@ if (!started) {
         </button>
       </div>
     );
-  }
 const logOut = async () => {
   await supabase.auth.signOut();
   setStarted(false);
@@ -205,7 +204,7 @@ const logOut = async () => {
    <main 
       style={{ 
         padding: 40, 
-        fontFamily: "'Lora',serif",
+        fontFamily: "'Lora', serif",
         background: C. ivory,
         minHeight: "100vh",
       }}
