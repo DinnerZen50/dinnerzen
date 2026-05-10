@@ -205,7 +205,7 @@ const logOut = async () => {
    <main 
       style={{ 
         padding: 40, 
-        fontFamily: "sans-serif",
+        fontFamily: "serif",
         background: C. ivory,
         minHeight: "100vh",
       }}
